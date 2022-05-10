@@ -38,6 +38,7 @@ class TransactionDTO:
     urlReturn: str
     urlStatus: str
     sign: str
+    encoding: str
 
     # cart: List[ItemDTO]
 
@@ -64,6 +65,7 @@ class TransactionDTO:
             urlReturn=success_url,
             urlStatus=status_url,
             sign=sign,
+            encoding="UTF-8",
         )
 
 
