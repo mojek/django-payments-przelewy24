@@ -69,6 +69,7 @@ def transaction() -> Transaction:
         currency="PLN",
         description="Test",
         email="foo@bar.com",
+        client="John Doe",
         country="PL",
         language="pl",
     )

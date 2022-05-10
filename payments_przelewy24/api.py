@@ -2,6 +2,7 @@ import hashlib
 import json
 import logging
 from dataclasses import asdict, dataclass
+from typing import Optional
 
 import requests
 
@@ -17,6 +18,7 @@ class Transaction:
     currency: str
     description: str
     email: str
+    client: str
     country: str
     language: str
 
@@ -31,10 +33,12 @@ class TransactionDTO:
     description: str
     email: str
     country: str
+    client: str
     language: str
     urlReturn: str
     urlStatus: str
     sign: str
+
     # cart: List[ItemDTO]
 
     @classmethod
@@ -55,6 +59,7 @@ class TransactionDTO:
             description=transaction.description,
             email=transaction.email,
             country=transaction.country,
+            client=transaction.client,
             language=transaction.language,
             urlReturn=success_url,
             urlStatus=status_url,
