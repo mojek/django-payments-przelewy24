@@ -18,7 +18,7 @@ class Transaction:
     currency: str
     description: str
     email: str
-    client: str
+    # client: str
     country: str
     language: str
 
@@ -33,7 +33,7 @@ class TransactionDTO:
     description: str
     email: str
     country: str
-    client: str
+    # client: str
     language: str
     urlReturn: str
     urlStatus: str
@@ -60,7 +60,7 @@ class TransactionDTO:
             description=transaction.description,
             email=transaction.email,
             country=transaction.country,
-            client=transaction.client,
+            # client=transaction.client,
             language=transaction.language,
             urlReturn=success_url,
             urlStatus=status_url,
